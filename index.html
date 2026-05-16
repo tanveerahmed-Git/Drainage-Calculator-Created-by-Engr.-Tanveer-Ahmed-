@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drainage Calculator created by Engr. Tanveer Ahmed</title>
+
+<!-- SEO TITLE - Google search me yahi dikhega -->
+<title>Free Drainage Calculator - Slope, Invert Level & Pipe Gradient | Engr. Tanveer Ahmed</title>
+
+<!-- SEO DESCRIPTION - Google search me title k neeche yahi dikhega -->
+<meta name="description" content="Free professional drainage calculator for engineers. Calculate pipe slope, invert level, pipe fall, gradient percentage and manhole spacing as per UAE Dubai Municipality, BS EN 12056, BS EN 752 standards. Created by Engr. Tanveer Ahmed - MEP Engineer.">
+
+<!-- SEO KEYWORDS -->
+<meta name="keywords" content="drainage calculator, slope calculator, invert level calculator, pipe gradient calculator, manhole invert level, drainage slope UAE, Dubai drainage calculator, BS EN 12056 calculator, MEP drainage design, pipe fall calculator, drainage engineer UAE, drainage calculation online, free drainage tool, slope ratio calculator">
+
+<!-- AUTHOR -->
+<meta name="author" content="Engr. Tanveer Ahmed - MEP Engineer">
+
+<!-- ROBOTS - Google ko allow karta hai crawl karne k liye -->
+<meta name="robots" content="index, follow">
+
+<!-- CANONICAL URL -->
+<link rel="canonical" href="https://tanveerahmed-git.github.io/Drainage-Calculator-Created-by-Engr.-Tanveer-Ahmed-/">
+
+<!-- OPEN GRAPH - WhatsApp Facebook share k liye -->
+<meta property="og:title" content="Free Drainage Calculator - Slope & Invert Level | Engr. Tanveer Ahmed">
+<meta property="og:description" content="Professional drainage calculator for pipe slope, invert level and manhole spacing as per UAE and BS EN standards. Free to use online.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tanveerahmed-git.github.io/Drainage-Calculator-Created-by-Engr.-Tanveer-Ahmed-/">
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
     *{
         margin:0;
@@ -258,7 +284,6 @@
             </div>
         </div>
 
-
         <div class="card">
             <h2>Recommended Drainage Slopes</h2>
 
@@ -268,7 +293,6 @@
                     <th>Recommended Slope</th>
                     <th>Approx %</th>
                 </tr>
-                
                 <tr>
                     <td>25 - 50 mm</td>
                     <td>1:40</td>
@@ -321,7 +345,6 @@
 
     </div>
 
-
     <div class="footer">
         <h2 style="margin-bottom:15px;color:#0d47a1;">Professional Engineering Guidance</h2>
 
@@ -364,7 +387,6 @@
 </div>
 
 <script>
-
 function calculateDrainage(){
 
     const startIL = Number(document.getElementById('startIL').value);
@@ -399,16 +421,12 @@ function calculateDrainage(){
     let spacingStatus = '';
 
     if(pipeSize > 100){
-
         if(distance <= 15){
             spacingStatus = '<span class="green">Within approved spacing limit.</span>';
-        }
-        else{
+        } else {
             spacingStatus = '<span class="red">Distance exceeds approved 15m limit. Additional manhole required.</span>';
         }
-
-    }
-    else{
+    } else {
         spacingStatus = '<span class="green">Internal drainage pipe. Manhole criteria not applicable.</span>';
     }
 
@@ -416,59 +434,64 @@ function calculateDrainage(){
 
     if((pipeSize === 25 || pipeSize === 50) && ratioValue !== 40){
         slopeComment = '<span class="red">Approved slope for 25mm-50mm pipe should be 1:40.</span>';
-    }
-    else if((pipeSize === 75 || pipeSize === 100) && ratioValue !== 60){
+    } else if((pipeSize === 75 || pipeSize === 100) && ratioValue !== 60){
         slopeComment = '<span class="red">Approved slope for 75mm-100mm pipe should be 1:60.</span>';
-    }
-    else if(pipeSize === 150 && ratioValue !== 90){
+    } else if(pipeSize === 150 && ratioValue !== 90){
         slopeComment = '<span class="red">Approved slope for 150mm pipe should be 1:90.</span>';
-    }
-    else if(pipeSize === 200 && ratioValue !== 120){
+    } else if(pipeSize === 200 && ratioValue !== 120){
         slopeComment = '<span class="red">Approved slope for 200mm pipe should be 1:120.</span>';
-    }
-    else if(pipeSize === 300 && ratioValue !== 200){
+    } else if(pipeSize === 300 && ratioValue !== 200){
         slopeComment = '<span class="red">Approved slope for 300mm pipe should be 1:200.</span>';
-    }
-    else{
+    } else {
         slopeComment = '<span class="green">Slope matches approved drainage criteria.</span>';
     }
 
-    document.title = 'Drainage Calculator created by Engr. Tanveer Ahmed';
-
     document.getElementById('resultBox').innerHTML = `
-
         <strong>Calculation Results:</strong>
         <br><br>
-
         Pipe Size : <strong>${pipeSize} mm</strong>
         <br>
-
         Start Manhole / Pipe IL : <strong>${startIL.toFixed(3)} m</strong>
         <br>
-
         Distance : <strong>${distance.toFixed(2)} m</strong>
         <br>
-
         Slope Ratio : <strong>1:${ratioValue}</strong>
         <br>
-
         Slope Percentage : <strong>${slopePercent.toFixed(3)}%</strong>
         <br>
-
         Pipe Fall : <strong>${fall.toFixed(3)} m</strong>
         <br>
-
         Next Invert Level : <strong>${nextIL.toFixed(3)} m</strong>
         <br><br>
-
         ${spacingStatus}
         <br><br>
-
         ${slopeComment}
-
     `;
 }
+</script>
 
+<!-- JSON-LD Structured Data - Google ko samjhata hai ye kya tool hai -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Drainage System Calculator",
+  "description": "Free professional drainage calculator for pipe slope, invert level, pipe fall and manhole spacing as per UAE Dubai Municipality and BS EN standards.",
+  "url": "https://tanveerahmed-git.github.io/Drainage-Calculator-Created-by-Engr.-Tanveer-Ahmed-/",
+  "author": {
+    "@type": "Person",
+    "name": "Engr. Tanveer Ahmed",
+    "email": "engg.tanveerahmed@gmail.com",
+    "jobTitle": "MEP Engineer"
+  },
+  "applicationCategory": "EngineeringApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
 </script>
 
 <div style="text-align:center; margin-top:25px; padding:15px; font-size:16px; color:#0d47a1; font-weight:600; letter-spacing:0.5px;">
